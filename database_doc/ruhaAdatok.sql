@@ -1,22 +1,9 @@
-INSERT INTO poloadatok (id, meret, szín, marka,ar) VALUES
-  (1, 'S', 'Fekete', 'Nike Sportswear Tee', 9800),
-  (2, 'XS','Fekete', 'Nike Repeat Tee', 12500),
-  (3, 'M', 'Fehér', 'Nike Club Tee', 8900),
-  (4, 'XXS','Piros', 'Nike Academy Tee', 7800),
-  (5, 'L', 'Fekete', 'Nike NSW Tee', 8230),
-  (6, 'XXL', 'Fekete', 'Nike Sportswear Essentials', 15800);
-
-
-INSERT INTO nadragok (id,meret,szín,marka,ar) VALUES
-   (1, 'XS', 'Fekete', 'Nike Tech Fleece Pants', 38000),
-   (2, 'S', 'Szürke', 'Nike Club Pants', 18000),
-   (3, 'M', 'Fekete', 'Nike Swoosh Pants', 24500),
-   (4, 'L', 'Fehér', 'Nike Sportswear Cargo Pants', 23000);
-
-INSERT INTO puloverek (id, meret, szín, marka, ar) VALUES
-   (1, 'XS', 'Fekete', 'Nike Tech Fleece Hoodie', 45000),
-   (2, 'S', 'Piros', 'Nike Club Fleece Hoodie', 24000),
-   (3, 'M', 'Fehér', 'Nike Swoosh Hoodie', 32000),
-   (4, 'L', 'Fekete', 'Nike Sportswear Trainer Hoodie', 18000);
+insert into users(id,firstName, lastNamer, gender, userName, email, password, number) VALUES
+ (1, 'Nagy','József','Férfi','Nagyjozsi1212','nagyjozsef2000@gmail.com','adsjiajsdji213', 06206756876);
+ (2, 'Kiss','Csaba','Férfi','csabakiss12','kiss.csaba47@gmail.com','ajofghgjhgpojghj456', 06308768691);
+ (3, 'Szabó','Attila','Férfi','szaboattila98','attilaszabo887@gmail.com','uirtzrtziourtoi234', 06704786543);
+ (4, 'Erika','Zoltán','Nõ','zoltanerika34','zoltanerika2000@gmail.com','iututizutoitzu67', 06306754564);
+ (5, 'Tóth','Lili','Nõ','liltoth65','tothlili@gmail.com','mvbmnvmnvnv677', 06302345667);
+ 
 
 
