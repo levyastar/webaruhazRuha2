@@ -44,3 +44,12 @@ CREATE TABLE ruhakweb.categories (
   PRIMARY KEY (id)
 )
 ENGINE = INNODB;
+
+
+
+# lekerdezesek
+
+
+  #get http://localhost:3000/categories
+
+select * from categories;

@@ -174,3 +174,37 @@ Content-Type: application/json
     "date": "2022.10.13 01:35:00",
     "carId": 2
 }
+
+
+###______________________________SAJAT
+## get trips
+get http://localhost:3000/categories
+
+### get trips
+get http://localhost:3000/categoriesABC
+
+### get trips by id
+get http://localhost:3000/categories/1
+
+### get trips
+get http://localhost:3000/products
+
+### get trips
+get http://localhost:3000/productsABC
+
+
+### post trip
+post http://localhost:3000/categories
+Content-Type: application/json
+
+{
+   
+      "name": "Nike Club Fleece Hoodie",
+      "size": "S",
+      "color": "Fehér",
+      "price": 21000,
+      "quantity": 23,
+      "categoryId": 2
+}
+
+

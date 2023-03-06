@@ -633,6 +633,25 @@ app.get("/categoriesABC", (req, res) => {
     connection.release();
   });
 });
+
+app.get("/categories/:id", (req, res) => {
+  const id = req.params.id;
+  let sql = `
+    SELECT * from categories
+    WHERE id = ?`;
+
+  pool.getConnection(function (error, connection) {
+    if (error) {
+      sendingGetError(res, "Server connecting error!");
+      return;
+    }
+    connection.query(sql, [id], function (error, results, fields) {
+      sendingGetById(res, error, results, id);
+    });
+    connection.release();
+  });
+});
+
 //#endregion categories
 
 //#region products
@@ -675,6 +694,37 @@ app.get("/productsABC", (req, res) => {
   });
 });
 //#endregion products
+//post
+app.post("/categories", (req, res) => {
+  const newR = {
+    numberOfMinits: sanitizeHtml(req.body.numberOfMinits),
+    date: sanitizeHtml(req.body.date),
+    carId: +sanitizeHtml(req.body.carId),
+  };
+
+  let sql = `
+  INSERT categories 
+  (numberOfMinits, date, carId)
+  VALUES
+  (?, ?, ?)
+    `;
+
+  pool.getConnection(function (error, connection) {
+    if (error) {
+      sendingGetError(res, "Server connecting error!");
+      return;
+    }
+    connection.query(
+      sql,
+      [newR.numberOfMinits, newR.date, newR.carId],
+      function (error, result, fields) {
+        sendingPost(res, error, result, newR);
+      }
+    );
+    connection.release();
+  });
+});
+
 
 
 app.listen(process.env.APP_PORT, () => {
