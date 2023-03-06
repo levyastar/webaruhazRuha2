@@ -1,8 +1,0 @@
-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
-
-git remote add origin https://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@github.com/levyastar/webaruhazRuha.git
-
-git clone https://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@github.com/levyastar/webaruhazRuha.git
-
-
-adadads
